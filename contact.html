@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Mix3 Sound for professional live sound services">
+    <title>Contact Us | Mix3 Sound, Inc.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo/mix3-logo.png" alt="Mix3 Sound, Inc." class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Let's discuss how we can make your event sound perfect</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Request a Quote</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="event-type">Event Type *</label>
+                            <select id="event-type" name="event-type" required>
+                                <option value="">Select an option</option>
+                                <option value="tour">Concert Tour</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="festival">Festival</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Event Date</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Event Location</label>
+                            <input type="text" id="location" name="location" placeholder="City, State">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="attendees">Expected Attendees</label>
+                            <input type="text" id="attendees" name="attendees" placeholder="e.g., 500-1000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell us about your event and your audio needs..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+
+                    <div id="form-message" class="form-message"></div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-info-item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:info@mix3sound.com">info@mix3sound.com</a></p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <h3>📞 Phone</h3>
+                        <p><a href="tel:5551234567">(555) 123-4567</a></p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <h3>📍 Service Area</h3>
+                        <p>Nationwide - United States</p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <h3>⏰ Business Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM EST<br>
+                        Saturday: 10:00 AM - 4:00 PM EST<br>
+                        Sunday: Closed</p>
+                        <p class="small-text">24/7 support available for active events</p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <h3>💬 Quick Response</h3>
+                        <p>We typically respond to all inquiries within 24 hours during business days.</p>
+                    </div>
+
+                    <div class="contact-info-item social-links">
+                        <h3>Follow Us</h3>
+                        <p>
+                            <!-- Add your social media links here -->
+                            <a href="#" class="social-link">Facebook</a> | 
+                            <a href="#" class="social-link">Instagram</a> | 
+                            <a href="#" class="social-link">LinkedIn</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How far in advance should I book?</h3>
+                    <p>We recommend booking at least 3-6 months in advance for tours and major events. However, we can often accommodate shorter timelines for corporate events and smaller productions.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you travel nationwide?</h3>
+                    <p>Yes, we provide services throughout the United States and can coordinate logistics for multi-city tours and events.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What brands of equipment do you use?</h3>
+                    <p>We use industry-leading brands including d&b audiotechnik, L-Acoustics, Meyer Sound, DiGiCo, Yamaha, Shure, and Sennheiser.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer equipment-only rentals?</h3>
+                    <p>Yes, we offer dry hire options for qualified audio engineers who need equipment only.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>MIX<span class="highlight">3</span> SOUND</h3>
+                    <p>Professional live sound solutions for tours and corporate events across the USA.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Email: info@mix3sound.com</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>USA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mix3 Sound, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu & Form Script -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const messageDiv = document.getElementById('form-message');
+            messageDiv.innerHTML = '<p class="success-message">Thank you for your message! We will get back to you within 24 hours.</p>';
+            messageDiv.style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
