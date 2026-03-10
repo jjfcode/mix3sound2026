@@ -1,74 +1,62 @@
 /* ========================================
    MIX3 SOUND, INC. - RESPONSIVE STYLESHEET
-   Mobile & Tablet Optimizations
+   AVLFX-Inspired Responsive Layout
    ======================================== */
 
-/* ============ TABLET (max-width: 992px) ============ */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .container {
-        padding: 0 30px;
+        padding: 0 22px;
     }
 
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2.5rem; }
 
     .hero-title {
-        font-size: 3rem;
+        font-size: clamp(2.5rem, 9vw, 4.6rem);
     }
 
-    .hero-description {
-        font-size: 1.1rem;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
+    .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .mv-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 }
 
-/* ============ MOBILE (max-width: 768px) ============ */
 @media (max-width: 768px) {
     :root {
         --spacing-xl: 4rem;
         --spacing-lg: 3rem;
-        --spacing-md: 1.5rem;
+        --spacing-md: 1.4rem;
     }
 
-    /* Navigation Mobile */
+    .navbar {
+        padding: 0.7rem 0;
+    }
+
+    .logo-img {
+        height: 44px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
         top: 70px;
-        flex-direction: column;
-        background-color: #2B2A2A;
         width: 100%;
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
-        padding: 2rem 0;
         gap: 0;
+        padding: 1rem 0;
+        background: #0d1218;
+        border-bottom: 1px solid #2a3442;
+        transition: left 0.3s ease;
+    }
+
+    .nav-menu li {
+        padding: 0.65rem 0;
     }
 
     .nav-menu.active {
         left: 0;
-    }
-
-    .nav-menu li {
-        padding: 1rem 0;
     }
 
     .hamburger {
@@ -87,19 +75,14 @@
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
-    /* Hero Section Mobile */
     .hero {
-        height: auto;
-        min-height: 70vh;
-        padding: 4rem 0;
+        min-height: 75vh;
+        padding: 3.4rem 0;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
+    .hero-kicker,
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.72rem;
     }
 
     .hero-description {
@@ -113,167 +96,103 @@
 
     .hero-buttons .btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 290px;
     }
 
-    /* Grid Adjustments */
     .features-grid,
     .services-grid,
     .values-grid,
     .stats-grid,
     .additional-grid,
     .testimonials-grid,
-    .faq-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Page Header Mobile */
-    .page-header h1 {
-        font-size: 2.5rem;
-    }
-
-    .page-header p {
-        font-size: 1.1rem;
-    }
-
-    /* Service Detail Cards */
-    .service-detail-card {
-        padding: 2rem 1.5rem;
-    }
-
-    /* Portfolio Mobile */
+    .faq-grid,
+    .mv-grid,
+    .gallery-grid,
+    .consultation-grid,
+    .plan-grid,
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
 
     .portfolio-filters {
         flex-direction: column;
-        gap: 0.5rem;
+        align-items: stretch;
     }
 
     .filter-btn {
         width: 100%;
     }
 
-    /* Footer Mobile */
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    /* Contact Form Mobile */
-    .contact-info {
-        order: 2;
-    }
-
-    .contact-form-container {
-        order: 1;
-    }
-}
-
-/* ============ SMALL MOBILE (max-width: 480px) ============ */
-@media (max-width: 480px) {
-    .container {
-        padding: 0 20px;
-    }
-
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.75rem; }
-    h3 { font-size: 1.25rem; }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .logo h1 {
-        font-size: 1.5rem;
-    }
-
-    .logo-img {
-        height: 40px;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 0.9rem;
-    }
-
-    .btn {
-        padding: 12px 30px;
-        font-size: 1rem;
-    }
-
     .feature-card,
+    .value-card,
     .service-card,
     .additional-card,
     .testimonial-card,
-    .faq-item {
-        padding: 1.5rem;
+    .faq-item,
+    .mv-card,
+    .contact-info,
+    .service-detail-card,
+    .portfolio-item,
+    .consultation-card,
+    .plan-card {
+        padding: 1.4rem;
+    }
+
+    .page-header h1 {
+        font-size: 3rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 18px;
+    }
+
+    h1 { font-size: 2.7rem; }
+    h2 { font-size: 2.1rem; }
+    h3 { font-size: 1.5rem; }
+
+    .section-title {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero-title {
+        font-size: 2.7rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+
+    .portfolio-image .placeholder-image,
+    .gallery-card {
+        min-height: 160px;
     }
 
     .stat-number {
-        font-size: 2.5rem;
-    }
-
-    .service-detail-card {
-        padding: 1.5rem 1rem;
-    }
-
-    .contact-info {
-        padding: 1.5rem;
-    }
-
-    .placeholder-image {
-        padding: 5rem 1rem;
-        font-size: 1rem;
-    }
-
-    .portfolio-image {
-        height: 200px;
-    }
-
-    .portfolio-info {
-        padding: 1.5rem;
+        font-size: 2.7rem;
     }
 }
 
-/* ============ LANDSCAPE MOBILE FIX ============ */
-@media (max-height: 600px) and (orientation: landscape) {
+@media (max-height: 620px) and (orientation: landscape) {
     .hero {
         min-height: 100vh;
-        padding: 2rem 0;
+        padding: 2.5rem 0;
     }
 
     .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-description {
-        font-size: 0.95rem;
+        font-size: 2.7rem;
     }
 }
 
-/* ============ LARGE SCREENS (min-width: 1400px) ============ */
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1400px;
-    }
-
-    .hero-title {
-        font-size: 4.5rem;
-    }
-
-    .section-title {
-        font-size: 3rem;
-    }
-}
-
-/* ============ ACCESSIBILITY & PERFORMANCE ============ */
-
-/* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -281,24 +200,10 @@
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .btn-primary,
-    .btn-secondary {
-        border: 3px solid currentColor;
-    }
-
-    .feature-card,
-    .service-card,
-    .portfolio-item {
-        border: 2px solid var(--text-dark);
-    }
-}
-
-/* Print styles */
 @media print {
     .navbar,
     .hamburger,
@@ -309,12 +214,7 @@
     }
 
     body {
-        font-size: 12pt;
-        line-height: 1.5;
+        background: #fff;
         color: #000;
-    }
-
-    .container {
-        max-width: 100%;
     }
 }
